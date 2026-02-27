@@ -14,9 +14,7 @@ const playfair = Playfair_Display({
 })
 
 export const metadata: Metadata = {
-  title: 'Paras Shah – Elevating Human Beings to the Next Level',
-  description:
-    'Communication coach, IELTS expert, and bestselling author. Helping you master communication, build deeper relationships, and transform your life.',
+  title: 'Kuldip Sutariya',
 }
 
 export const viewport: Viewport = {
