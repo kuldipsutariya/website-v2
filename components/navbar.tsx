@@ -30,7 +30,7 @@ export default function Navbar() {
     >
       <div className="max-w-7xl mx-auto flex items-center justify-between px-8 md:px-12 relative z-[1001]">
         
-        {/* --- BRAND (Bold & Static White) --- */}
+        {/* --- BRAND --- */}
         <Link href="/" className="flex flex-col group">
           <span className="text-xl md:text-2xl font-extrabold tracking-tighter text-white">
             Kuldip Sutariya
@@ -43,16 +43,17 @@ export default function Navbar() {
         {/* --- DESKTOP NAV --- */}
         <div className="hidden lg:flex items-center gap-10">
           {navLinks.map((link) => (
-            <a 
+            <Link 
               key={link.name} 
               href={link.href}
               className="text-[10px] font-bold uppercase tracking-[0.2em] text-white/40 hover:text-white transition-all relative group py-1"
             >
               {link.name}
               <span className="absolute bottom-0 left-0 w-0 h-[1px] bg-[#0071E3] transition-all duration-300 group-hover:w-full"></span>
-            </a>
+            </Link>
           ))}
           
+          {/* FIXED: Changed from file path to route path */}
           <Link 
             href="/contact" 
             className="group flex items-center gap-2 bg-white text-black px-6 py-2.5 rounded-full text-[10px] font-black uppercase tracking-widest hover:bg-[#0071E3] hover:text-white transition-all active:scale-95 shadow-lg"
@@ -78,8 +79,9 @@ export default function Navbar() {
         }`}
       >
         <div className="flex flex-col items-start justify-start h-full px-8 pt-32 gap-8">
-          {[...navLinks, { name: "Connect", href: "#contact" }].map((link, i) => (
-            <a 
+          {/* FIXED: Included the proper /contact path for mobile too */}
+          {[...navLinks, { name: "Connect", href: "/contact" }].map((link, i) => (
+            <Link 
               key={link.name} 
               href={link.href}
               onClick={() => setIsMenuOpen(false)}
@@ -90,7 +92,7 @@ export default function Navbar() {
             >
               {link.name}
               <span className="absolute -bottom-1 left-0 w-0 h-[2px] bg-[#0071E3] transition-all duration-300 group-active:w-full group-hover:w-full"></span>
-            </a>
+            </Link>
           ))}
         </div>
       </div>

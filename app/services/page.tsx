@@ -215,55 +215,7 @@ export default function ServicesPage() {
           </div>
         </section>
 
-        {/* --- RELIABILITY & INFRASTRUCTURE --- */}
-        <section className="px-6 md:px-8 py-32 md:py-56 bg-white text-black">
-          <div className="max-w-7xl mx-auto">
-            <div className="grid lg:grid-cols-2 gap-20 items-center">
-              <div className="reveal opacity-0 -translate-x-10 transition-all duration-1000">
-                <h3 className="text-[#0071E3] text-[10px] font-black uppercase tracking-[0.5em] mb-6">Reliability</h3>
-                <h2 className="text-[36px] md:text-[64px] font-black tracking-tighter leading-tight mb-8">
-                  Built for ownership. <br /> Not subscription.
-                </h2>
-                <p className="text-xl text-[#6e6e73] leading-relaxed italic font-medium mb-12">
-                  Unlike generic agencies that lock you into monthly fees, we build on open-standard technology. 
-                  When the project is finished, you hold 100% of the asset. No licensing traps.
-                </p>
-                <div className="grid grid-cols-2 gap-6">
-                  {[
-                    { label: "Uptime", val: "99.9%" },
-                    { label: "Performance", val: "100/100" },
-                    { label: "Device Support", val: "Omni" },
-                    { label: "Maintenance", val: "Fixed" }
-                  ].map((stat, i) => (
-                    <div key={i} className="p-6 bg-[#f5f5f7] rounded-3xl border border-black/5">
-                      <p className="text-[10px] font-black uppercase tracking-[0.2em] text-[#0071E3] mb-2">{stat.label}</p>
-                      <p className="text-2xl font-black">{stat.val}</p>
-                    </div>
-                  ))}
-                </div>
-              </div>
-              
-              <div className="relative reveal opacity-0 translate-x-10 transition-all duration-1000">
-                <div className="bg-[#111] p-10 md:p-16 rounded-[60px] text-white shadow-3xl">
-                  <ShieldCheck size={48} className="text-[#0071E3] mb-8" />
-                  <h4 className="text-3xl font-bold tracking-tight mb-6 italic">The Investment Guarantee</h4>
-                  <ul className="space-y-6">
-                    {[
-                      "Strategy-first planning before code",
-                      "Full source code ownership",
-                      "Strategic post-launch support"
-                    ].map((item, i) => (
-                      <li key={i} className="flex items-start gap-4 text-white/70 font-bold text-sm">
-                        <CheckCircle2 size={18} className="text-[#0071E3] mt-0.5" />
-                        {item}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
+
 
         {/* --- FAQ SECTION --- */}
         <section className="px-6 md:px-8 py-24 md:py-48 bg-[#f5f5f7] text-black border-y border-black/5">
