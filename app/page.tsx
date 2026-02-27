@@ -269,18 +269,22 @@ export default function KuldipMasterPortfolio() {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div className="space-y-2">
                   <label className="text-[11px] font-bold opacity-40 uppercase tracking-widest ml-1 text-white/50">Name</label>
-                  <input name="name" required className="w-full bg-white/5 border border-white/10 rounded-2xl px-6 py-4 outline-none focus:border-[#0071E3] transition-all" placeholder="Full Name" />
+                  <input name="name" type="text" required className="w-full bg-white/5 border border-white/10 rounded-2xl px-6 py-4 outline-none focus:border-[#0071E3] transition-all" placeholder="Your Name" />
                 </div>
                 <div className="space-y-2">
-                  <label className="text-[11px] font-bold opacity-40 uppercase tracking-widest ml-1 text-white/50">Profession</label>
-                  <select name="profession" required className="w-full bg-white/5 border border-white/10 rounded-2xl px-6 py-4 outline-none focus:border-[#0071E3] appearance-none cursor-pointer">
-                    <option value="" className="bg-black">Select Option</option>
-                    <option value="Doctor" className="bg-black">Doctor / Clinic</option>
-                    <option value="Educator" className="bg-black">Coaching / IELTS</option>
-                    <option value="Consultant" className="bg-black">Independent Consultant</option>
-                    <option value="Other" className="bg-black">Other Profession</option>
-                  </select>
+                  <label className="text-[11px] font-bold opacity-40 uppercase tracking-widest ml-1 text-white/50">Email Address</label>
+                  <input name="email" type="email" required className="w-full bg-white/5 border border-white/10 rounded-2xl px-6 py-4 outline-none focus:border-[#0071E3] transition-all" placeholder="name@email.com" />
                 </div>
+              </div>
+              <div className="space-y-2">
+                <label className="text-[11px] font-bold opacity-40 uppercase tracking-widest ml-1 text-white/50">Profession</label>
+                <select name="profession" required className="w-full bg-white/5 border border-white/10 rounded-2xl px-6 py-4 outline-none focus:border-[#0071E3] appearance-none cursor-pointer">
+                  <option value="" className="bg-black">Select Option</option>
+                  <option value="Doctor" className="bg-black">Doctor / Clinic</option>
+                  <option value="Educator" className="bg-black">Coaching / IELTS</option>
+                  <option value="Consultant" className="bg-black">Independent Consultant</option>
+                  <option value="Other" className="bg-black">Other Profession</option>
+                </select>
               </div>
               <div className="space-y-2">
                 <label className="text-[11px] font-bold opacity-40 uppercase tracking-widest ml-1 text-white/50">Goal</label>
@@ -310,7 +314,6 @@ export default function KuldipMasterPortfolio() {
           100% { transform: translateX(-50%); }
         }
         .animate-scroll {
-          /* CHANGED TO 5s FOR MAXIMUM SPEED */
           animation: scroll 5s linear infinite;
         }
       `}</style>
