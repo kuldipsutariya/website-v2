@@ -134,7 +134,7 @@ export default function KuldipMasterPortfolio() {
         </div>
       </section>
 
-      {/* --- AUTO SLIDER BAR (SIRS STYLE) --- */}
+      {/* --- AUTO SLIDER BAR --- */}
       <div className="bg-white/5 border-y border-white/10 py-6 overflow-hidden relative">
         <div className="flex animate-scroll whitespace-nowrap gap-16 items-center">
           {[...trustPoints, ...trustPoints, ...trustPoints].map((point, i) => (
@@ -170,12 +170,11 @@ export default function KuldipMasterPortfolio() {
         </div>
       </section>
 
-      {/* --- PRICING SECTION (MOBILE FLIP) --- */}
+      {/* --- PRICING SECTION --- */}
       <section id="pricing" className="px-6 py-24 md:py-40 bg-white text-black border-t border-gray-100">
         <div className="mx-auto max-w-7xl text-center">
           <h2 className="text-[36px] md:text-[56px] font-bold tracking-tighter mb-20">Simple Fixed Pricing.</h2>
           
-          {/* MOBILE FLIP */}
           <div className="md:hidden perspective-1000 relative min-h-[520px]">
             <div className={`transition-all duration-300 transform ${isFlipping ? "opacity-0 scale-95" : "opacity-100 scale-100"}`}>
               <div className="bg-[#f5f5f7] p-8 rounded-[40px] border border-[#d2d2d7] text-left min-h-[460px] flex flex-col">
@@ -202,7 +201,6 @@ export default function KuldipMasterPortfolio() {
             </button>
           </div>
 
-          {/* DESKTOP GRID */}
           <div className="hidden md:grid gap-8 md:grid-cols-3 text-left">
             {packages.map((pkg, i) => (
               <div key={i} className="bg-[#f5f5f7] p-12 rounded-[45px] border border-transparent hover:border-[#d2d2d7] hover:bg-white hover:shadow-2xl transition-all flex flex-col group">
@@ -249,7 +247,7 @@ export default function KuldipMasterPortfolio() {
         </div>
       </section>
 
-      {/* --- CONTACT SECTION (WEB3FORMS COMPATIBLE) --- */}
+      {/* --- CONTACT SECTION --- */}
       <section id="contact" className="px-6 py-24 md:py-40 bg-black text-white">
         <div className="mx-auto max-w-6xl grid md:grid-cols-2 gap-16 lg:gap-24 items-center">
           <div className="animate-on-scroll opacity-0 translate-y-10 transition-all duration-1000 text-left">
@@ -312,7 +310,8 @@ export default function KuldipMasterPortfolio() {
           100% { transform: translateX(-50%); }
         }
         .animate-scroll {
-          animation: scroll 40s linear infinite;
+          /* CHANGED TO 5s FOR MAXIMUM SPEED */
+          animation: scroll 5s linear infinite;
         }
       `}</style>
     </div>
